@@ -4,149 +4,248 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">     
     <title>Celulas</title>
 </head>
 <body>
-    <nav class="container-flex between"id="home">
+    <nav class="container-flex between fixed nav">
         <div class="flip">
             <a href="index.html"><img class="img-logo" src="img/plenumsoft.png"  alt="logo de la empresa plenumsoft"></a>            
         </div>
         <div>
             <ul class="unlist list-h">
-                <li class="item-unlist"> <a href="#home">Home</a></li>
+                <li class="item-unlist"><a href="#home">Home</a></li>
                 <li class="item-unlist"><a href="#temas">Temas</a></li>
                 <li class="item-unlist"><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
-    <header class="container-flex img-fnd" >
-        <div class="flex-start w-35 h-80 ml-10">
+    <header class="container-flex img-fnd py-5 "  >
+        <div class="flex-start w-35 mt-15 h-80 ml-10"id="home">
             <div class="">
                 <h2 class="text-p">Que la <strong class="resalter">pandemia</strong> no te detenga</h2>
                 <p class="text-s">atrevete a conocer todo lo que puedes aprender con nosotros</p>
+                <button onClick="clickm()" id="btn-s" class="btn">Suscribete!</button>
             </div>
               
+            <div id="modal-s" class="modal">         
+                <div class="cont-modal">                  
+                  <div class="modal-h">
+                    <span onClick="clickc()" class="close">&times;</span>
+                    <h2>Suscribete para acceder al contenido</h2>
+                  </div>
+                    <div class="modal-b py-5">
+                        <p>Proporciona tu correo electronico para ponernos en contacto</p>
+                        <input type="text">
+                    </div>
+                  <div class="modal-f">
+                        <button class="btn"> Enviar</button>
+                  </div>
+                </div>              
+            </div>
         </div>        
     </header>
     <section class="container txt-center" id="temas">             
-            <h3 class="title-tm"> Conoce todos lo que puedes aprender con nosotros, únete y aprovecha esta oportunidad</h3>    
-            <div class="container-flex flex-center">
+            <h3 class="title-tm">Temas relevantes</h3>    
+            <div class="container-flex  flex-center">              
                 <div class=" txt-apy w-60  ">             
-                    <p>Durante tu estancia en nuestro equipo, podrás adquirir tanto conocimientos teoricos como experiencia 
-                        practica en diversas areas. Con ayuda de un experto y con apoyo de tu institución educativa, continuaras 
-                        tu desarrollo como ingeneiro bajo proyectos y practicas enfocadasa a tu crecimiento personal, a continuación, 
-                        se presentan algunos que abarcaremos duranteeste tiempo. 
+                    <p>Accede a cualquier tema con nuestra suscripción anual o mensual 
                     </p>
+                </div>                
+            </div> 
+            <div class="w-80 container-flex my-10 mx-auto ">
+                <div class="card container-flex row center-v tooltip" onClick="pressme(tmcontent1)">                                        
+                    <div class="w-40">
+                        <img style="width: 100%;" src="img/ingS.jpg" alt="">
+                    </div>
+                    <div class="w-60 ">
+                        <h4>Ingenieria de software</h4>
+                        <p>15 hrs de contenido</p>
+                    </div>   
+                    <span class="tool-txt">Presioname!</span>                                                        
+                </div>                
+                <div class="card container-flex row center-v tooltip" onClick="pressme(tmcontent2)">                                        
+                    <div class="w-40">
+                        <img style="width: 100%;" src="img/arq.jpg" alt="">
+                    </div>
+                    <div class="w-60 ">
+                        <h4>Arquitectura de software</h4>
+                        <p>15 hrs de contenido</p>
+                    </div> 
+                    <span class="tool-txt">Presioname!</span>                                     
                 </div>
-            </div>       
-                         
-    </section>
-    <section class="container-grid fondo-a py-5">
-        <div class="item-img">
-            <img class="img-tm" src="img/ingR.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title txt-center title-tm b">
-            <h4 class="">Introducción a la ingeniería de software</h4>
-        </div>
-        <div class="item-txt b">
-            <p>La ingeniería de software no solo es desarrollo, también es análisis y documentación.
-                Es un proceso que involucra diferentes métricas de trabajo (tiempos, disciplina,
-                análisis, riesgos, equipo) esto para generar un producto funcional, pero con la misma
-                posibilidad de brindar soporte como garantía. Pasar de propósito general a propósito
-                especifico según el programa.</p>
-        </div>
-    </section>
-    <section class="container-grid py-5">
-        <div class="item-img-e">
-            <img class="img-tm" src="img/ingS.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title-e txt-center title-tm ">
-            <h4 class="">Introducción a la ingeniería de software</h4>
-        </div>
-        <div class="item-txt-e ">
-            <p>La ingeniería de software no solo es desarrollo, también es análisis y documentación.
-                Es un proceso que involucra diferentes métricas de trabajo (tiempos, disciplina,
-                análisis, riesgos, equipo) esto para generar un producto funcional, pero con la misma
-                posibilidad de brindar soporte como garantía. Pasar de propósito general a propósito
-                especifico según el programa.</p>
-        </div>
-    </section>
-    <section class="container-grid fondo-a py-5">
-        <div class="item-img">
-            <img class="img-tm" src="img/arq.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title txt-center title-tm b">
-            <h4 class="">Introducción a la arquitectura de software</h4>
-        </div>
-        <div class="item-txt b">
-            <p>Arquitectura de software es similar al diseño de software. La estructura de sistema se
-                describe en 3 niveles diferenciados por el grado de detalles. El estilo arquitectónico,
-                patrones de diseño y diseño de componentes. Cada una presenta detalles según lo que se
-                quiera observar o encontrar. Los estilos arquitectónicos dependerán de los requerimientos.</p>
-        </div>
-    </section>
-    <section class="container-grid py-5">
-        <div class="item-img-e">
-            <img class="img-tm" src="img/pat.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title-e txt-center title-tm ">
-            <h4 class="">Patrones de diseño</h4>
-        </div>
-        <div class="item-txt-e ">
-            <p>Un patrón soluciona un problema de diseño recurrente. Estos patrones se pueden
-                combinar según la magnitud del problema de diseño. Es una solución de diseño a un
-                problema recurrente en un contexto particular.</p>
-        </div>
-    </section>
-    <section class="container-grid fondo-a py-5">
-        <div class="item-img">
-            <img class="img-tm" src="img/api.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title txt-center title-tm b">
-            <h4 class="">A.P.I</h4>
-        </div>
-        <div class="item-txt b">
-            <p>API (application progamming interface). Establece una vía de comunicación entre
-                softwares y los datos a través de reglas. Hoy en día está basado en peticiones y
-                respuestas.</p>
-        </div>
-    </section>
-    <section class="container-grid py-5">
-        <div class="item-img-e">
-            <img class="img-tm" src="img/mat.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title-e txt-center title-tm ">
-            <h4 class="">Matemáticas/lógica</h4>
-        </div>
-        <div class="item-txt-e ">
-            <p>Matemáticas como resolución de problemas de manera lógica, practica y eficiente.
-                Involucrando creatividad, experiencias y pensamientos abstractos y diferentes para
-                solucionar problemas.</p>
-        </div>
-    </section>
-    <section class="container-grid fondo-a py-5">
-        <div class="item-img">
-            <img class="img-tm" src="img/funp.jpg" alt="foto referente a la ingenieria en software">
-        </div>
-        <div class="item-title txt-center title-tm b">
-            <h4 class="">Fundamentos de programación</h4>
-        </div>
-        <div class="item-txt b">
-            <p>La construcción de una página web, implica un proceso interno derivado de la URL
-                (Localizador Uniforme de Recursos), es un proceso de contacto con el servidor, localizado
-                los recursos necesarios (Media, CSS y JS) y lo retorna al navegador cliente.</p>
-        </div>
-    </section>
+                <div class="card container-flex row center-v tooltip" onClick="pressme(tmcontent3)">                                        
+                    <div class="w-40">
+                        <img style="width: 100%;" src="img/pat.jpg" alt="">
+                    </div>
+                    <div class="w-60 ">
+                        <h4>Patrones de diseño</h4>
+                        <p>8 hrs de contenido</p>
+                    </div>    
+                    <span class="tool-txt">Presioname!</span>                                   
+                </div>
+                <div class="card container-flex row center-v tooltip" onClick="pressme(tmcontent4)">                                        
+                    <div class="w-40">
+                        <img style="width: 100%;" src="img/api.jpg" alt="">
+                    </div>
+                    <div class="w-60 ">
+                        <h4>API</h4>
+                        <p>5 hrs de contenido</p>
+                    </div>  
+                    <span class="tool-txt">Presioname!</span>                                     
+                </div>                
+                
+            </div> 
+            <div id="tmcontent1" class="container w-60 mx-auto tm-ext ocultar">
+                <h3 class="title-tm">Introducción a la ingeniería de software</h3>
+                <div class="container-flex row txt-apy">                    
+                    <p>
+                        La ingeniería de software no solo es desarrollo, también es análisis y documentación.
+                        Es un proceso que involucra diferentes métricas de trabajo (tiempos, disciplina,
+                        análisis, riesgos, equipo) esto para generar un producto funcional, pero con la misma
+                        posibilidad de brindar soporte como garantía. Pasar de propósito general a propósito
+                        especifico según el programa.
+                    </p>
+                   
+                </div>                
+            </div>
+            <div id="tmcontent2" class="container w-60 mx-auto tm-ext ocultar">
+                <h3 class="title-tm">Introducción a la arquitectura de software</h3>
+                <div class="container-flex row txt-apy">                    
+                    <p>
+                        Arquitectura de software es similar al diseño de software. La estructura de sistema se
+                        describe en 3 niveles diferenciados por el grado de detalles. El estilo arquitectónico,
+                        patrones de diseño y diseño de componentes. Cada una presenta detalles según lo que se
+                        quiera observar o encontrar. Los estilos arquitectónicos dependerán de los requerimientos.
+                    </p>
+                   
+                </div>                
+            </div>
+            <div id="tmcontent3" class="container w-60 mx-auto tm-ext ocultar">
+                <h3 class="title-tm">Patrones de diseño</h3>
+                <div class="container-flex row txt-apy">                    
+                    <p>
+                        Un patrón soluciona un problema de diseño recurrente. Estos patrones se pueden
+                        combinar según la magnitud del problema de diseño. Es una solución de diseño a un
+                        problema recurrente en un contexto particular.                        
+                    </p>
+                    <br>
+                    <p>
+                        Diferencia entre un patrón de diseño con estilos arquitectónicos. Los patrones son de
+                        medio nivel, pocas clases y relaciones. Los estilos se aplican globalmente en toda la
+                        aplicación, no resuelve el problema sino organizar.
+                    </p>
+                   
+                </div>                
+            </div>
+            <div id="tmcontent4" class="container w-60 mx-auto tm-ext ocultar">
+                <h3 class="title-tm">API</h3>
+                <div class="container-flex row txt-apy">                    
+                    <p>
+                        API (application progamming interface). Establece una vía de comunicación entre
+                        softwares y los datos a través de reglas. Hoy en día está basado en peticiones y
+                        respuestas.
+                    </p>
+                    <br>
+                    <p>
+                        APIS REST. Es un estilo de arquitectura de software estandarizado usado para desarrollar
+                        API ́s se caracteriza por ser simple, estandarizado, escalables, sin estado y de alto
+                        rendimiento. Basado en request (solicitud) , response (respuesta). Operaciones de CRUD. 
+                    </p>
+                   
+                </div>                
+            </div>
+                                                    
+    </section>  
+    <section class="w-80 container mx-auto">   
+        <h3  class="title-tm">¡El conocimiento está al alcance de todos!</h3>
+        <div class=" txt-apy ">             
+            <p class="left">Aprovecha al máximo tu tiempo, estudia y demuestra que eres el mejor.  
+            </p>
+        </div>  
+        <div class="container-flex row w-80 mx-auto img-fnd2" >
+            <div class="w-40 pl-20 b ">
+                <p class="txt-com">
+                    "Es divertido aprender con ayuda de profesionales 
+                    los temas presentados, asi como los proyectos son abordados 
+                    de una manera eficiente para apoyar a los alumnos..."
+                    
+                </p> 
+            <a href="#home"><button id="bn-com" class="btn"> Conoce más!  </button>  </a>
+                                          
+            </div>
+            <div class="w-80 container-flex flex-e pt-20 pr-5">
+               <div class="w-40 txt-center mr-5 " id="parpadeo" onload="pressme()">
+                    <div  >
+                        <p class="cupon" id="cupon">Solo hoy </p> 
+                        <p class="cupon" id="">20% de descuento </p> 
+                        <p class="cupon" id="cupon-f">hasta el </p>                      
+                        <p class="cupon" id="cupon-cont"> </p>  
+                    </div>                        
+               </div>
+            </div>            
+        </div>             
+    </section>  
+    <section class="container txt-center" id="temas2">             
+        <h3 class="title-tm">Otros temas de interes</h3>    
+        <div class="container-flex  flex-center">              
+            <div class=" txt-apy w-60  ">             
+                <p>Accede a cualquier tema con nuestra suscripción anual o mensual 
+                </p>
+            </div>                
+        </div> 
+        <div class="w-80 container-flex my-10 mx-auto ">
+            <div class="card container-flex row center-v tooltip">                                        
+                <div class="w-40">
+                    <img style="width: 100%;" src="img/ingR.jpg" alt="">
+                </div>
+                <div class="w-60 ">
+                    <h4>Ingeniería de requerimientose</h4>
+                    <p>20 hrs de contenido</p>
+                </div>           
+                <span class="tool-txt">Presioname!</span>                                                   
+            </div>
+            <div class="card container-flex row center-v">                                        
+                <div class="w-40">
+                    <img style="width: 100%;" src="img/mat.jpg" alt="">
+                </div>
+                <div class="w-60 ">
+                    <h4>Matemáticas/lógica</h4>
+                    <p>15 hrs de contenido</p>
+                </div>                                      
+            </div>
+            <div class="card container-flex row center-v">                                        
+                <div class="w-40">
+                    <img style="width: 100%;" src="img/funp.jpg
+                    " alt="">
+                </div>
+                <div class="w-60 ">
+                    <h4>Fundamentos de programación</h4>
+                    <p>10 hrs de contenido</p>
+                </div>                                      
+            </div>
+            <div class="card container-flex row center-v">                                        
+                <div class="w-40">
+                    <img style="width: 100%;" src="img/js.jpg" alt="">
+                </div>
+                <div class="w-60 ">
+                    <h4>JavaScript</h4>
+                    <p>15 hrs de contenido</p>
+                </div>                                      
+            </div>                
+            
+        </div> 
+                                                
+    </section>        
     <section class="container-flex flex-center py-5">
         <div class="title-tm px-10">
             <h3>Encuentranos!</h3>            
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29794.184106132136!2d-89.67535367128622!3d21.021759354610055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5674891d01315f%3A0xcb8ba96b39a6031c!2sInstituto%20Tecnol%C3%B3gico%20de%20M%C3%A9rida%2C%20Campus%20Poniente!5e0!3m2!1ses-419!2smx!4v1614134027173!5m2!1ses-419!2smx" width="700" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
-    <footer class="container ">
+    <footer class="container " id="contacto">
         <div class="footer-fnd txt-center">
-            <h2 class="m0 b">Contactanos!</h2>
+            <h2 class="m0 b py-5">Contactanos!</h2>
         </div>
         <div class="container-flex flex-a fondo-a">
             <div class="b">
@@ -162,9 +261,12 @@
                 <a href="index.html"><img class="img-logo" src="img/plenumsoft.png"  alt="logo de la empresa plenumsoft"></a>     
             </div>
         </div>
-        <div class="footer-fnd txt-center b">
+        <div class="footer-fnd txt-center b py-5">
             <p class="m0 ">	<strong>lexxcorp</strong>&copy;todos los derechos reservados 2021</p>
         </div>
     </footer>
+    <!-- <script type="text/javascript" src="js/modal.js"></script> -->
+    <!-- <script type="text/javascript" src="js/fecha.js"></script> -->
+    <script type="text/javascript" src="js/pressme.js"></script>   
 </body>
 </html>
